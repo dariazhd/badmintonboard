@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>Spielfeld</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/jquery@3.6.1/dist/jquery.slim.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            function snd(exampleInputEmail1, exampleInputEmail2) {
+                document.getElementById(exampleInputEmail2).value = document.getElementById(
+                 exampleInputEmail1
+                ).value;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="col-sm">
+            &nbsp;
+        </div>
+        <h1 style="margin-left: 35%; color: blueviolet"> Setze Spieler auf dem Spielfeld</h1>
+        <form action="spielfeld/addSpielfeld">
+            <div class="container">
+                <div class="row">
+                    <div class="col-sm-6"></div>
+                    <div class="col-sm-6">
+                        <select style="float: right;" id="erstauf" name='erstauf'>
+                            <option th:each="spieler : ${erstauf}" th:value="${spieler.id}" th:text="${spieler.vorname + ' ' + spieler.name}"></option>
+                        </select>
+                        <p style="float: right;">Erstaufschlagender: &nbsp;</p>                        
+                    </div>                    
+                    <div class="col-sm-6" style="background-color:#95dec8; height: 300px;">
+                        
+                        <select id="ol" name='ol' style="margin-top: 140px; margin-left: 40%">
+                          <option th:each="spieler : ${spieler1team}" th:value="${spieler.id}" th:text="${spieler.vorname + ' ' + spieler.name}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6" style="background-color:#b592e8;">
+                        <select style="margin-top: 140px; margin-left: 40%" id="or" name='or'>
+                        <option th:each="spieler : ${spieler2team}" th:value="${spieler.id}" th:text="${spieler.vorname + ' ' + spieler.name}"></option>
+                      </select>
+                    </div>
+                    <div class="col-sm-6" style="background-color:#b592e8; height: 300px;">
+                      <select style="margin-top: 140px; margin-left: 40%" id="ul" name='ul'> 
+                      <option th:each="spieler : ${spieler1team}" th:value="${spieler.id}" th:text="${spieler.vorname + ' ' + spieler.name}"></option>
+                        </select>
+                    </div>
+                    <div class="col-sm-6" style="background-color:#95dec8;">
+                        <select style="margin-top: 140px; margin-left: 40%" id="ur" name='ur'>
+                          <option th:each="spieler : ${spieler2team}" th:value="${spieler.id}" th:text="${spieler.vorname + ' ' + spieler.name}"></option>
+                      </select>
+                    </div>
+                    <div class="row">
+                        &nbsp;
+                    </div>
+                    <div style="margin-left: 35%" class="col-sm">
+                        <button type='submit' class="btn btn-primary" style="margin-left: 40%">Submit</button>
+                    </div>
+                    <div class="col-sm-4"></div>
+                  </div>                
+            </div>
+            <input type="hidden" name='spielId' th:value="${spiel}" />            
+        </form>       
+        
+        <form class="container">
+            <input type="button"
+                   value="Zurück zum Start"
+                   onClick='location.href="/start"'/>
+        </form>
+        <div class="col-sm">
+            &nbsp;
+        </div>
+    </body>
+</html>

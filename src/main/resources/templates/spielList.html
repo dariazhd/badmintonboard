@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<!--
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/Other/html.html to edit this template
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div>Spiel ist gestartet:</div>
+        <div><td th:text ="${team1}"/>VS<td th:text ="${team2}"/></div>
+        <div>Erstaufschlagender: <td th:text ="${erstauf}" /> </div>
+        <table class="table">
+  <tbody>
+    <tr >
+        <th scope ="row" th:text=/>
+    </tr>
+  </tbody>
+</table>
+        
+        <h1>Nachrichten</h1>
+        <table class="table">
+  <tbody>
+    <tr th:each = "nachricht: ${nachrichten}">
+        <th scope ="row" th:text="${nachricht}"/>
+    </tr>
+  </tbody>
+</table>
+        <form class="container">
+            <input type="button"
+                   value="1 Punkt für Team oben"
+                   onClick='location.href="/punkten"'/>
+        </form>
+        
+        <form class="container">
+            <input type="button"
+                   value="1 Punkt für Team unten"
+                   onClick='location.href="/punkten"'/>
+        </form>
+        
+        <form class="container">
+            <input type="button"
+                   value="Zurück zum Start"
+                   onClick='location.href="/start"'/>
+        </form>
+    </body>
+</html>
