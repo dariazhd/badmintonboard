@@ -2,14 +2,14 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package de.hawhamburg.inf.projectb.Service;
+package de.hawhamburg.inf.badmintonboard.Service;
 
-import de.hawhamburg.inf.projectb.Models.Spiel;
-import de.hawhamburg.inf.projectb.Models.Spieler;
-import de.hawhamburg.inf.projectb.Models.Spielfeld;
-import de.hawhamburg.inf.projectb.Models.Spielsatz;
-import de.hawhamburg.inf.projectb.Models.Team;
-import de.hawhamburg.inf.projectb.Repository.SpielRepository;
+import de.hawhamburg.inf.badmintonboard.Models.Spiel;
+import de.hawhamburg.inf.badmintonboard.Models.Spieler;
+import de.hawhamburg.inf.badmintonboard.Models.Spielfeld;
+import de.hawhamburg.inf.badmintonboard.Models.Spielsatz;
+import de.hawhamburg.inf.badmintonboard.Models.Team;
+import de.hawhamburg.inf.badmintonboard.Repository.SpielRepository;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

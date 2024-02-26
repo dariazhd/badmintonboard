@@ -1,4 +1,4 @@
-package de.hawhamburg.inf.projectb;
+package de.hawhamburg.inf.badmintonboard;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

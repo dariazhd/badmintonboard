@@ -1,7 +1,7 @@
-package de.hawhamburg.inf.projectb;
+package de.hawhamburg.inf.badmintonboard;
 
-import de.hawhamburg.inf.projectb.Models.Spieler;
-import de.hawhamburg.inf.projectb.Models.Team;
+import de.hawhamburg.inf.badmintonboard.Models.Spieler;
+import de.hawhamburg.inf.badmintonboard.Models.Team;
 import java.util.LinkedList;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
